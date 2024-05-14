@@ -9,7 +9,7 @@ import { Student } from '../student';
 export class TdfComponent {
 
 
- std = new Student('kumar',27,'kumar@gmail.com')
+ std = new Student('kumar',0,'kumar@gmail.com')
 
   saveForm(formData : any) {
 

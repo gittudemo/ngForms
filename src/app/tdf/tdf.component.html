@@ -12,21 +12,26 @@
       {{std.email}} -->
       {{std |json}}
 
+
     <form #myForm="ngForm" (ngSubmit)="saveForm(myForm.value)">
       <div class="form-group">
-        <label>Enetr Name:</label>
-        <input type="text" name="name" placeholder="Enter Name" [(ngModel)]="std.name" ngModel class="form-control">
-     
+        <label>Enter Name:</label>
+        <input type="text" name="name" placeholder="Enter Name" [(ngModel)]="std.name" ngModel 
+        required [class.is-invalid] ="name.touched && name.invalid"
+        class="form-control" novalidate #name="ngModel">
+     Touched : {{name.touched}}
+      un-Touched : {{name.untouched}}
         
       </div>
         <div class="form-group">
           <label>Enetr Age:</label>
-          <input type="number" name="age" placeholder="Enter Age" [(ngModel)]="std.age" ngModel class="form-control">
+          <input type="number" name="age" placeholder="Enter Age" [(ngModel)]="std.age" ngModel class="form-control" #age="ngModel"  required [class.is-invalid] ="age.touched && age.invalid" >
         
         </div>
           <div class="form-group">
             <label>Enetr email:</label>
-            <input type="text" name="email" placeholder="Enter Email" [(ngModel)]="std.email" ngModel class="form-control">
+            <input type="text" name="email" placeholder="Enter Email" [(ngModel)]="std.email" ngModel class="form-control" 
+             #email="ngModel"  required [class.is-invalid] ="email.touched && email.invalid"novalidate>
           
           </div>
           <br>
