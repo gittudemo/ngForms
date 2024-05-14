@@ -1,0 +1,32 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div><h2>Template Driven forms</h2></div>
+
+    <form #myForm="ngForm" (ngSubmit)="saveForm(myForm.value)">
+      <div class="form-group">
+        <label>Enetr Name:</label>
+        <input type="text" name="name" placeholder="Enter Name" ngModel class="form-control">
+        
+      </div>
+        <div class="form-group">
+          <label>Enetr Age:</label>
+          <input type="number" name="age" placeholder="Enter Age" ngModel class="form-control">
+        
+        </div>
+          <div class="form-group">
+            <label>Enetr email:</label>
+            <input type="text" name="email" placeholder="Enter Email" ngModel class="form-control">
+          
+          </div>
+          <br>
+          <div class="d-grid">
+            <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+          </div>
+    </form>
+
+  </div>
+
+</div>
