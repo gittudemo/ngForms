@@ -1,0 +1,25 @@
+<h2>Reactive Forms</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <form [formGroup]="signupForm" (ngSubmit)="handleSubmit(signupForm)">
+        <div class="form-group">
+        <label>Enter Name:</label>
+        <input type="text" class="form-control" name="name" formControlName="name">
+        </div>
+          <div class="form-group">
+            <label>Enter Age:</label>
+            <input type="number" class="form-control" name="age" formControlName="age">
+          </div>
+            <div class="form-group">
+              <label>Enter Email:</label>
+              <input type="email" class="form-control" name="email" formControlName="email">
+            </div>
+<div class="d-grid">
+  <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+  
+</div>
+      </form>
+    </div>
+  </div>
+</div>
